@@ -23,4 +23,114 @@ document.addEventListener('DOMContentLoaded', function() {
             bar.style.width = finalWidth;
         });
     });
+    
+    // Typing effect for hero subtitle
+    if (document.querySelector('.typing-text')) {
+        const text = document.querySelector('.typing-text').innerHTML;
+        document.querySelector('.typing-text').innerHTML = '';
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.querySelector('.typing-text').innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        setTimeout(typeWriter, 1000);
+    }
+    
+    // Splash screen
+    if (document.querySelector('.splash-screen')) {
+        setTimeout(() => {
+            document.querySelector('.splash-screen').classList.add('fade-out');
+            setTimeout(() => {
+                document.querySelector('.splash-screen').style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 500);
+        }, 2000);
+    }
+    
+    // Project modals
+    document.querySelectorAll('.project-modal-trigger').forEach(function(trigger) {
+        trigger.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            document.getElementById(modalId).classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    document.querySelectorAll('.modal-close').forEach(function(close) {
+        close.addEventListener('click', function() {
+            document.querySelectorAll('.project-modal').forEach(function(modal) {
+                modal.classList.remove('show');
+            });
+            document.body.style.overflow = 'auto';
+        });
+    });
+    
+    // Skill cards popup info
+    document.querySelectorAll('.skill-info-trigger').forEach(function(trigger) {
+        trigger.addEventListener('mouseover', function() {
+            const infoId = this.getAttribute('data-info');
+            document.getElementById(infoId).style.opacity = '1';
+            document.getElementById(infoId).style.visibility = 'visible';
+        });
+        
+        trigger.addEventListener('mouseout', function() {
+            const infoId = this.getAttribute('data-info');
+            document.getElementById(infoId).style.opacity = '0';
+            document.getElementById(infoId).style.visibility = 'hidden';
+        });
+    });
+    
+    // Form validation
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+            
+            contactForm.querySelectorAll('[required]').forEach(function(field) {
+                if (!field.value.trim()) {
+                    valid = false;
+                    field.classList.add('is-invalid');
+                } else {
+                    field.classList.remove('is-invalid');
+                }
+            });
+            
+            const email = contactForm.querySelector('[type="email"]');
+            if (email && email.value) {
+                const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!regex.test(email.value)) {
+                    valid = false;
+                    email.classList.add('is-invalid');
+                }
+            }
+            
+            if (valid) {
+                // Simulate form submission
+                contactForm.querySelector('button[type="submit"]').disabled = true;
+                contactForm.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi...';
+                
+                // Here you would typically send the form data to a backend service like Formspree
+                setTimeout(() => {
+                    contactForm.reset();
+                    contactForm.querySelector('button[type="submit"]').disabled = false;
+                    contactForm.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-paper-plane me-2"></i>Envoyé!';
+                    
+                    // Show success message
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'alert alert-success mt-3';
+                    successMessage.innerHTML = 'Votre message a été envoyé avec succès!';
+                    contactForm.appendChild(successMessage);
+                    
+                    setTimeout(() => {
+                        contactForm.removeChild(successMessage);
+                        contactForm.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-paper-plane me-2"></i>Envoyer Message';
+                    }, 3000);
+                }, 1500);
+            }
+        });
+    }
 });

@@ -53,7 +53,7 @@
             <div class="row g-4">
                 <!-- Project 1 -->
                 <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="project-card card h-100">
+                    <div class="project-card card h-100 project-modal-trigger" data-modal="projectModal1">
                         <img src="https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?q=80&w=2070" class="project-img card-img-top" alt="Dashboard CHU">
                         <div class="card-body p-4">
                             <h4>Dashboard pour un CHU</h4>
@@ -80,7 +80,7 @@
 
                 <!-- Project 2 -->
                 <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="project-card card h-100">
+                    <div class="project-card card h-100 project-modal-trigger" data-modal="projectModal2">
                         <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070" class="project-img card-img-top" alt="AI Text Summarizer">
                         <div class="card-body p-4">
                             <h4>AI Text Summarizer</h4>
@@ -222,9 +222,77 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- New Project: Medical Assistant -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="project-card card h-100 project-modal-trigger" data-modal="projectModal7">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070" class="project-img card-img-top" alt="Assistant Médical IA">
+                        <div class="card-body p-4">
+                            <h4>Assistant Médical avec LLMs et RAG</h4>
+                            <p class="card-text">Développement d'un assistant médical intelligent utilisant des modèles de langage avancés et la méthode Retrieval-Augmented Generation (RAG).</p>
+                            <div class="mt-auto">
+                                <span class="skill-badge">LLMs</span>
+                                <span class="skill-badge">RAG</span>
+                                <span class="skill-badge">Python</span>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <h4>Assistant Médical avec LLMs et RAG</h4>
+                            <p>Ce projet vise à créer un assistant médical capable de fournir des réponses précises et contextualisées en combinant des modèles de langage avancés et des bases de données médicales. L'objectif est d'améliorer l'accès à des informations médicales fiables et personnalisées.</p>
+                            <div class="tech-stack">Technologies utilisées:</div>
+                            <div class="tech-list">
+                                <span class="skill-badge">LLMs</span>
+                                <span class="skill-badge">RAG</span>
+                                <span class="skill-badge">Python</span>
+                                <span class="skill-badge">Hugging Face</span>
+                                <span class="skill-badge">LangChain</span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=2073" alt="Illustration du projet Assistant Médical" class="img-fluid mt-3">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Project Modals -->
+    <div id="projectModal1" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Dashboard pour un CHU</h3>
+                <div class="modal-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?q=80&w=2070" alt="Dashboard CHU" class="img-fluid mb-4">
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Description</h4>
+                        <p>Ce projet a permis d'améliorer considérablement la prise de décision médicale. Les tableaux de bord ont été conçus après une analyse approfondie des besoins de chaque service, permettant une visualisation claire des métriques critiques.</p>
+                        
+                        <h4 class="mt-4">Technologies utilisées</h4>
+                        <div class="tech-list">
+                            <span class="skill-badge">Power BI</span>
+                            <span class="skill-badge">SQL</span>
+                            <span class="skill-badge">Excel</span>
+                            <span class="skill-badge">DAX</span>
+                            <span class="skill-badge">DataViz</span>
+                        </div>
+                        
+                        <h4 class="mt-4">Résultats</h4>
+                        <ul>
+                            <li>Réduction de 30% du temps de prise de décision</li>
+                            <li>Visualisation en temps réel des données critiques</li>
+                            <li>Implémentation réussie dans 3 services différents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add similar modals for other projects -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -232,7 +300,6 @@
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/oussama-kaddouri-8a760929a" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                 <a href="mailto:kaddourioussama189@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
             <p>© 2023 Kaddouri Oussama. Tous droits réservés.</p>

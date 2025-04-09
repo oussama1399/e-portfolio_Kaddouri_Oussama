@@ -60,12 +60,12 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(45deg, var(--primary-color), var(--dark-bg));
+    background: linear-gradient(45deg, #2A3F54, #1a2530, #2c3e50);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
     height: 100vh;
     color: white;
     display: flex;
-    align-items: center;
-    position: relative;
     overflow: hidden;
 }
 
@@ -520,4 +520,285 @@ section {
 
 .progress-bar[data-aos-final-width] {
     min-width: 10%;
+}
+
+/* Splash Screen */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 0.5s ease;
+}
+
+.splash-screen.fade-out {
+    opacity: 0;
+}
+
+.splash-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.splash-logo span {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.splash-title {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.splash-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+}
+
+/* Typing Effect */
+.typing-text::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+/* Scroll Sections */
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Project Modals */
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.project-modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal-header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* Skill Info Popups */
+.skill-info {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.skill-info::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--primary-color) transparent transparent transparent;
+}
+
+/* Card Hover Effects */
+.skill-card {
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0) 30%, rgba(255,255,255,0.3), rgba(255,255,255,0) 70%);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+.skill-card:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+/* Floating Bubbles */
+.bubbles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 8s infinite ease-in-out;
+}
+
+.bubble:nth-child(1) {
+    width: 60px;
+    height: 60px;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    left: 25%;
+    top: 40%;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    left: 60%;
+    top: 30%;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 80%;
+    top: 60%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+/* Form Validation Styles */
+.is-invalid {
+    border-color: #dc3545 !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3E%3Ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* Additional animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
