@@ -6,14 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
         offset: 100
     });
     
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
+    // Navbar scroll effect optimization
+    let lastScrollY = 0;
+    window.addEventListener('scroll', function () {
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
+        if (window.scrollY > 50 && window.scrollY > lastScrollY) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
+        lastScrollY = window.scrollY;
     });
     
     // Progress bar animations
@@ -24,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Typing effect for hero subtitle
+    // Enhanced typing effect with blinking cursor
     if (document.querySelector('.typing-text')) {
         const text = document.querySelector('.typing-text').innerHTML;
         document.querySelector('.typing-text').innerHTML = '';
@@ -34,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.typing-text').innerHTML += text.charAt(i);
                 i++;
                 setTimeout(typeWriter, 50);
+            } else {
+                document.querySelector('.typing-text').classList.add('blinking-cursor');
             }
         }
         setTimeout(typeWriter, 1000);
@@ -133,4 +137,87 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Project filtering
+    const filterBtns = document.querySelectorAll('.btn-filter');
+    const projectItems = document.querySelectorAll('.project-item');
+    
+    if(filterBtns.length && projectItems.length) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Get filter value
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Show/hide projects based on filter
+                projectItems.forEach(item => {
+                    if(filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+    
+    // Enhanced modal functionality with keyboard navigation
+    const projectModals = document.querySelectorAll('.project-modal');
+    if(projectModals.length) {
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if(e.key === 'Escape') {
+                projectModals.forEach(modal => {
+                    if(modal.classList.contains('show')) {
+                        modal.classList.remove('show');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        });
+        
+        // Close modal when clicking outside
+        projectModals.forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if(e.target === this) {
+                    this.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    }
+    
+    // Set active nav link based on current page
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    navLinks.forEach(link => {
+        // Remove active class from all links first
+        link.classList.remove('active');
+        
+        // Get the href value
+        const href = link.getAttribute('href');
+        
+        // Check if the current path ends with the href
+        if (currentPath.endsWith(href)) {
+            link.classList.add('active');
+        }
+        
+        // Special case for index/home
+        if (currentPath.endsWith('/') || currentPath.endsWith('index.html')) {
+            if (href === 'index.html') {
+                link.classList.add('active');
+            }
+        }
+    });
 });

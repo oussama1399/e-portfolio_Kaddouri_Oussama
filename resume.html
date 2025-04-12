@@ -8,6 +8,29 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .cv-section {
+            min-height: 40vh;
+            padding: 3rem 0;
+        }
+        
+        .btn-download {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .btn-download:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -29,6 +52,9 @@
                         <a class="nav-link" href="competences.html">Compétences</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="parcours.html">Parcours</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" href="resume.html">CV</a>
                     </li>
                     <li class="nav-item">
@@ -42,153 +68,27 @@
     <!-- Header -->
     <header class="hero-section text-center" style="height: 50vh;">
         <div class="container hero-content">
-            <h1 class="hero-title" data-aos="fade-down">CURRICULUM VITAE</h1>
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Mon parcours professionnel et académique</p>
-            <a href="assets/CV-Kaddouri-Oussama.pdf" class="btn btn-light hero-btn mt-3" data-aos="fade-up" data-aos-delay="300" download>
-                <i class="fas fa-download me-2"></i>Télécharger CV (PDF)
-            </a>
+            <h1 class="hero-title" data-aos="fade-down">MON CV</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Téléchargez mon CV pour en savoir plus sur mon parcours</p>
         </div>
     </header>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume-section py-5">
-        <div class="container">
-            <div class="timeline">
-                <!-- Education Section -->
-                <div data-aos="fade-right">
-                    <h3 class="mb-4 text-primary"><i class="fas fa-graduation-cap me-3"></i>Formation</h3>
-                </div>
-                
-                <!-- Education Item 1 -->
-                <div class="timeline-item left" data-aos="fade-right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023 - 2026</div>
-                        <h4 class="timeline-title">Diplôme d'ingénieur en Business Intelligence & Analytics</h4>
-                        <div class="timeline-location">École Nationale Supérieure d'Informatique et d'Analyse des Systèmes (ENSIAS)</div>
-                        <p>Formation d'ingénieur spécialisée en Business Intelligence, Data Science et Analytics.</p>
-                    </div>
-                </div>
-                
-                <!-- Education Item 2 -->
-                <div class="timeline-item right" data-aos="fade-left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2021 - 2023</div>
-                        <h4 class="timeline-title">Classes Préparatoires en MP (Mathématiques, Physique)</h4>
-                        <div class="timeline-location">CPGE Moulay Youssef</div>
-                        <p>Formation intensive en mathématiques et physique préparant aux concours des grandes écoles d'ingénieurs.</p>
-                    </div>
-                </div>
-                
-                <!-- Education Item 3 -->
-                <div class="timeline-item left" data-aos="fade-right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2019 - 2021</div>
-                        <h4 class="timeline-title">Baccalauréat en sciences Mathématiques</h4>
-                        <div class="timeline-location">Lycée Kadi Ayad</div>
-                        <p>Formation scientifique avec spécialisation en mathématiques.</p>
-                    </div>
-                </div>
-                
-                <!-- Experience Section -->
-                <div data-aos="fade-right" class="mt-5">
-                    <h3 class="mb-4 text-primary"><i class="fas fa-briefcase me-3"></i>Expérience Professionnelle</h3>
-                </div>
-                
-                <!-- Experience Item 1 -->
-                <div class="timeline-item left" data-aos="fade-right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2024</div>
-                        <h4 class="timeline-title">Stage d'été - Data Science</h4>
-                        <div class="timeline-location">Présidence du ministère public</div>
-                        <p>Développement d'un modèle d'automatisation de la classification des plaintes en ligne, utilisant des techniques avancées de machine learning.</p>
-                        <div>
-                            <span class="skill-badge">NLP</span>
-                            <span class="skill-badge">OCR</span>
-                            <span class="skill-badge">ML</span>
-                            <span class="skill-badge">Transformers</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Projects Section -->
-                <div data-aos="fade-right" class="mt-5">
-                    <h3 class="mb-4 text-primary"><i class="fas fa-project-diagram me-3"></i>Projets parascolaires</h3>
-                </div>
-                
-                <div class="timeline-item right" data-aos="fade-left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023</div>
-                        <h4 class="timeline-title">Projet Survey</h4>
-                        <div class="timeline-location">Enquête sur les parcours des lauréats</div>
-                        <p>Développement d'une plateforme anonyme pour recueillir et analyser les parcours des lauréats, renforçant les compétences en analyse de données et en développement web.</p>
-                    </div>
-                </div>
-                
-                <!-- Certifications Section -->
-                <div data-aos="fade-right" class="mt-5">
-                    <h3 class="mb-4 text-primary"><i class="fas fa-certificate me-3"></i>Certifications</h3>
-                </div>
-                
-                <!-- Certification Items -->
-                <div class="timeline-item left" data-aos="fade-right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023</div>
-                        <h4 class="timeline-title">Google Data Analytics Professional Certificate</h4>
-                        <p>Série de certifications comprenant: Process Data from Dirty to Clean, Prepare Data for Exploration, Foundations: Data, Data, Everywhere, Share Data Through the Art of Visualization, Ask Questions to Make Data-Driven Decisions.</p>
-                    </div>
-                </div>
-                
-                <!-- Languages Section -->
-                <div data-aos="fade-right" class="mt-5">
-                    <h3 class="mb-4 text-primary"><i class="fas fa-language me-3"></i>Langues</h3>
-                </div>
-                
-                <div class="row mt-4">
-                    <div class="col-md-4" data-aos="fade-up">
-                        <div class="p-4 bg-white rounded shadow-sm">
-                            <h5>Français</h5>
-                            <div class="progress mt-3">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" 
-                                     data-aos="fade-right" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
-                                     Courant
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="p-4 bg-white rounded shadow-sm">
-                            <h5>Anglais</h5>
-                            <div class="progress mt-3">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" 
-                                     data-aos="fade-right" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
-                                     Courant
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="p-4 bg-white rounded shadow-sm">
-                            <h5>Arabe</h5>
-                            <div class="progress mt-3">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" 
-                                     data-aos="fade-right" data-aos-delay="300" data-aos-anchor-placement="center-bottom">
-                                     Langue maternelle
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <main class="cv-section d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <a href="assets/CV_kaddouri_oussama.pdf" class="btn btn-download" download="CV_Kaddouri_Oussama">
+                📄 Télécharger mon CV (PDF)
+            </a>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/oussama-kaddouri-8a760929a" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:kaddourioussama189@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
             <p>© 2023 Kaddouri Oussama. Tous droits réservés.</p>
         </div>

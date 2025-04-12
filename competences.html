@@ -8,6 +8,60 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .skill-card {
+            height: 100%;
+            min-height: 350px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: white;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .skill-title {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            flex-grow: 1;
+        }
+        
+        .skill-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .skill-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        .language-card {
+            height: 100%;
+            min-height: 150px;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -27,6 +81,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="competences.html">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="parcours.html">Parcours</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="resume.html">CV</a>
@@ -72,19 +129,7 @@
                         <p class="mt-3">
                             <strong>Exemple:</strong> Modèle d'estimation de prix des diamants (voir projets).
                         </p>
-                        <div class="mt-4">
-                            <p class="mb-1 fw-bold text-start">Python</p>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 95%;"
-                                     data-aos="fade-right" data-aos-delay="200" data-aos-anchor-placement="center-bottom">95%</div>
-                            </div>
-
-                            <p class="mb-1 mt-3 fw-bold text-start">Machine Learning</p>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 85%;"
-                                     data-aos="fade-right" data-aos-delay="300" data-aos-anchor-placement="center-bottom">85%</div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -102,19 +147,7 @@
                         <p class="mt-3">
                             <strong>Exemple:</strong> Application web de formatation de données (voir projets).
                         </p>
-                        <div class="mt-4">
-                            <p class="mb-1 fw-bold text-start">Java</p>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"
-                                     data-aos="fade-right" data-aos-delay="400" data-aos-anchor-placement="center-bottom">75%</div>
-                            </div>
-
-                            <p class="mb-1 mt-3 fw-bold text-start">MySQL</p>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%;"
-                                     data-aos="fade-right" data-aos-delay="500" data-aos-anchor-placement="center-bottom">90%</div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -132,19 +165,7 @@
                         <p class="mt-3">
                             <strong>Exemple:</strong> Dashboard pour un CHU (voir projets).
                         </p>
-                        <div class="mt-4">
-                            <p class="mb-1 fw-bold text-start">Power BI</p>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 80%;"
-                                     data-aos="fade-right" data-aos-delay="600" data-aos-anchor-placement="center-bottom">80%</div>
-                            </div>
-
-                            <p class="mb-1 mt-3 fw-bold text-start">TensorFlow</p>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%;"
-                                     data-aos="fade-right" data-aos-delay="700" data-aos-anchor-placement="center-bottom">75%</div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -203,127 +224,52 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Skill progress animation section -->
-            <div class="step-section py-5" id="skillProgress">
-                <h3 class="text-center mb-5">Progression des compétences au fil du temps</h3>
-                
-                <div class="skill-timeline">
-                    <div class="timeline-marker" style="left: 0%">2021</div>
-                    <div class="timeline-marker" style="left: 33%">2022</div>
-                    <div class="timeline-marker" style="left: 66%">2023</div>
-                    <div class="timeline-marker" style="left: 100%">2024</div>
-                    
-                    <div class="skill-progress" data-name="Python" data-progress="[30, 60, 85, 95]"></div>
-                    <div class="skill-progress" data-name="Machine Learning" data-progress="[10, 40, 70, 85]"></div>
-                    <div class="skill-progress" data-name="SQL" data-progress="[20, 50, 75, 90]"></div>
-                    <div class="skill-progress" data-name="Data Visualization" data-progress="[15, 45, 65, 80]"></div>
-                </div>
-            </div>
-            
-            <script>
-                // Skill progress animation
-                document.addEventListener('DOMContentLoaded', function() {
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                animateSkillProgress();
-                                observer.disconnect();
-                            }
-                        });
-                    });
-                    
-                    observer.observe(document.getElementById('skillProgress'));
-                    
-                    function animateSkillProgress() {
-                        document.querySelectorAll('.skill-progress').forEach(function(skill, index) {
-                            const name = skill.getAttribute('data-name');
-                            const progress = JSON.parse(skill.getAttribute('data-progress'));
-                            
-                            const skillHTML = `
-                                <div class="skill-name">${name}</div>
-                                <div class="skill-track">
-                                    <div class="skill-point" style="left: 0%" data-value="${progress[0]}%"></div>
-                                    <div class="skill-point" style="left: 33%" data-value="${progress[1]}%"></div>
-                                    <div class="skill-point" style="left: 66%" data-value="${progress[2]}%"></div>
-                                    <div class="skill-point" style="left: 100%" data-value="${progress[3]}%"></div>
-                                `;
-                            
-                            skill.innerHTML = skillHTML;
-                            
-                            setTimeout(() => {
-                                skill.classList.add('animated');
-                            }, index * 300);
-                        });
-                    }
-                });
-            </script>
         </div>
     </section>
 
-    <!-- Additional CSS for skill timeline -->
-    <style>
-        .skill-timeline {
-            position: relative;
-            height: 300px;
-            margin: 50px 0;
-            padding-top: 40px;
-        }
-        
-        .timeline-marker {
-            position: absolute;
-            top: 0;
-            transform: translateX(-50%);
-            font-weight: bold;
-        }
-        
-        .skill-progress {
-            height: 40px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-        
-        .skill-name {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        
-        .skill-track {
-            height: 4px;
-            background-color: #ddd;
-            position: relative;
-        }
-        
-        .skill-point {
-            width: 20px;
-            height: 20px;
-            background-color: var(--secondary-color);
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 1s ease;
-            opacity: 0;
-        }
-        
-        .skill-point::before {
-            content: attr(data-value);
-            position: absolute;
-            top: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-        
-        .skill-point:hover::before {
-            opacity: 1;
-        }
-        
-        .skill-progress.animated .skill-point {
-            opacity: 1;
-        }
-    </style>
+    <!-- Languages Section -->
+    <section id="langues" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-down">
+                <i class="fas fa-language me-2"></i>🌐 Langues
+            </h2>
+            <div class="row g-4 mt-4">
+                <!-- French -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="language-card p-4 bg-white rounded shadow-sm text-center">
+                        <h5 class="language-title">Français</h5>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" data-aos="fade-right" data-aos-delay="200">
+                                Courant
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- English -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="language-card p-4 bg-white rounded shadow-sm text-center">
+                        <h5 class="language-title">Anglais</h5>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" data-aos="fade-right" data-aos-delay="300">
+                                Courant
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Arabic -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="language-card p-4 bg-white rounded shadow-sm text-center">
+                        <h5 class="language-title">Arabe</h5>
+                        <div class="progress mt-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" data-aos="fade-right" data-aos-delay="400">
+                                Langue maternelle
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">

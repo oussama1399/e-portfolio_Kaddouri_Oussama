@@ -29,6 +29,9 @@
                         <a class="nav-link" href="competences.html">Compétences</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="parcours.html">Parcours</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="resume.html">CV</a>
                     </li>
                     <li class="nav-item">
@@ -39,260 +42,176 @@
         </div>
     </nav>
 
-    <!-- Header -->
-    <header class="hero-section text-center" style="height: 50vh;">
-        <div class="container hero-content">
-            <h1 class="hero-title" data-aos="fade-down">MES PROJETS</h1>
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Découvrez mon travail et mes réalisations</p>
-        </div>
-    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Header -->
+        <header class="hero-section text-center" style="height: 50vh;">
+            <div class="container hero-content">
+                <h1 class="hero-title" data-aos="fade-down">MES PROJETS</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Découvrez mon travail et mes réalisations</p>
+            </div>
+        </header>
 
-    <!-- Projects Section -->
-    <section id="projets" class="py-5">
-        <div class="container">
-            <div class="row g-4">
-                <!-- Project 1 -->
-                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="project-card card h-100 project-modal-trigger" data-modal="projectModal1">
-                        <img src="https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?q=80&w=2070" class="project-img card-img-top" alt="Dashboard CHU">
-                        <div class="card-body p-4">
-                            <h4>Dashboard pour un CHU</h4>
-                            <p class="card-text">Conception et mise en place de trois tableaux de bord pour différents services du centre hospitalier universitaire de Oujda. Amélioration des processus décisionnels.</p>
-                            <div class="mt-auto">
-                                <span class="skill-badge">Power BI</span>
-                                <span class="skill-badge">DataViz</span>
-                            </div>
-                        </div>
-                        <div class="project-overlay">
-                            <h4>Dashboard pour un CHU</h4>
-                            <p>Ce projet a permis d'améliorer considérablement la prise de décision médicale. Les tableaux de bord ont été conçus après une analyse approfondie des besoins de chaque service, permettant une visualisation claire des métriques critiques.</p>
-                            <div class="tech-stack">Technologies utilisées:</div>
-                            <div class="tech-list">
-                                <span class="skill-badge">Power BI</span>
-                                <span class="skill-badge">SQL</span>
-                                <span class="skill-badge">Excel</span>
-                                <span class="skill-badge">DAX</span>
-                                <span class="skill-badge">DataViz</span>
+        <!-- Projects Section -->
+        <section id="projets" class="py-5">
+            <div class="container">
+                <div class="project-filters text-center mb-5" data-aos="fade-up">
+                    <button class="btn btn-filter active" data-filter="all">Tous les projets</button>
+                    <button class="btn btn-filter" data-filter="data-science">Data Science</button>
+                    <button class="btn btn-filter" data-filter="web">Développement Web</button>
+                    <button class="btn btn-filter" data-filter="ai">Intelligence Artificielle</button>
+                    <button class="btn btn-filter" data-filter="iot">IoT</button>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Project: Application Web de Gestion des Magasins -->
+                    <div class="col-md-6 project-item" data-category="web">
+                        <div class="card h-100 project-card">
+                            <div class="card-body">
+                                <h4 class="card-title">Application Web de Gestion des Magasins</h4>
+                                <p class="card-text">Cette application web permet la gestion centralisée des stocks, produits et utilisateurs dans un environnement multi-magasins. L'interface intuitive facilite les opérations quotidiennes et l'analyse des données commerciales.</p>
+                                <div class="mt-3">
+                                    <h6>Technologies utilisées:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="skill-badge">Oracle APEX</span>
+                                        <span class="skill-badge">Oracle Database</span>
+                                        <span class="skill-badge">SQL</span>
+                                        <span class="skill-badge">PL/SQL</span>
+                                        <span class="skill-badge">HTML/CSS</span>
+                                        <span class="skill-badge">JavaScript</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Project 2 -->
-                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="project-card card h-100 project-modal-trigger" data-modal="projectModal2">
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2070" class="project-img card-img-top" alt="AI Text Summarizer">
-                        <div class="card-body p-4">
-                            <h4>AI Text Summarizer</h4>
-                            <p class="card-text">Développement d'un modèle AI pour résumer des textes en arabe, avec un accent sur la précision et la clarté.</p>
-                            <div class="mt-auto">
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">TensorFlow</span>
-                                <span class="skill-badge">NLTK</span>
-                                <span class="skill-badge">Transformers</span>
-                            </div>
-                        </div>
-                        <div class="project-overlay">
-                            <h4>AI Text Summarizer</h4>
-                            <p>Ce modèle utilise des techniques avancées de NLP pour comprendre et résumer efficacement les textes en arabe. J'ai implémenté une architecture de transformers fine-tunée sur un corpus spécialisé, atteignant un score ROUGE-L de 0.78 sur notre jeu de test.</p>
-                            <div class="tech-stack">Technologies utilisées:</div>
-                            <div class="tech-list">
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">TensorFlow</span>
-                                <span class="skill-badge">NLTK</span>
-                                <span class="skill-badge">Transformers</span>
-                                <span class="skill-badge">BERT</span>
-                                <span class="skill-badge">Hugging Face</span>
+                    <!-- Project: Système de Recommandation de Livres -->
+                    <div class="col-md-6 project-item" data-category="ai">
+                        <div class="card h-100 project-card">
+                            <div class="card-body">
+                                <h4 class="card-title">Système de Recommandation de Livres <span class="badge bg-warning text-dark">En cours</span></h4>
+                                <p class="card-text">Développement d'une application web utilisant des algorithmes de machine learning pour analyser les préférences de lecture et recommander des livres personnalisés aux utilisateurs. Le système s'améliore progressivement grâce aux feedbacks utilisateurs.</p>
+                                <div class="mt-3">
+                                    <h6>Technologies utilisées:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="skill-badge">React</span>
+                                        <span class="skill-badge">Flask</span>
+                                        <span class="skill-badge">Machine Learning</span>
+                                        <span class="skill-badge">Deep Learning</span>
+                                        <span class="skill-badge">MongoDB</span>
+                                        <span class="skill-badge">Node.js</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="project-card card h-100">
-                        <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=2069" class="project-img card-img-top" alt="Diamond Price Estimation">
-                        <div class="card-body p-4">
-                            <h4>Modèle d'estimation de prix des diamants</h4>
-                            <p class="card-text">Développement d'un modèle prédictif pour estimer le prix des diamants en fonction de critères définis.</p>
-                            <div class="mt-auto">
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">Machine Learning</span>
-                            </div>
-                        </div>
-                        <div class="project-overlay">
-                            <h4>Modèle d'estimation de prix des diamants</h4>
-                            <p>Ce projet a impliqué l'analyse de plus de 50 000 entrées de diamants. J'ai utilisé plusieurs modèles de régression et implémenté un modèle d'ensemble qui a atteint une précision de 97% sur les prédictions de prix. Le modèle final a été déployé via une API REST.</p>
-                            <div class="tech-stack">Technologies utilisées:</div>
-                            <div class="tech-list">
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">Scikit-learn</span>
-                                <span class="skill-badge">Pandas</span>
-                                <span class="skill-badge">Matplotlib</span>
-                                <span class="skill-badge">Random Forest</span>
-                                <span class="skill-badge">XGBoost</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="project-card card h-100">
-                        <img src="https://images.unsplash.com/photo-1551836022-4c4c79ecde51?q=80&w=2070" class="project-img card-img-top" alt="Classification des plaintes">
-                        <div class="card-body p-4">
-                            <h4>Classification des plaintes en ligne</h4>
-                            <p class="card-text">Création d'un modèle de machine learning pour classifier les plaintes en catégories spécifiques. Stage à la Présidence du ministère public.</p>
-                            <div class="mt-auto">
-                                <span class="skill-badge">NLP</span>
-                                <span class="skill-badge">OCR</span>
-                                <span class="skill-badge">ML</span>
-                                <span class="skill-badge">Transformers</span>
-                            </div>
-                        </div>
-                        <div class="project-overlay">
-                            <h4>Classification des plaintes en ligne</h4>
-                            <p>Pendant mon stage, j'ai développé un système complet qui extrait le texte de documents scannés via OCR, puis utilise un modèle de classification NLP pour catégoriser automatiquement les plaintes. Le système a réduit le temps de traitement initial de 80%.</p>
-                            <div class="tech-stack">Technologies utilisées:</div>
-                            <div class="tech-list">
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">Tesseract OCR</span>
-                                <span class="skill-badge">TensorFlow</span>
-                                <span class="skill-badge">BERT multilingue</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 5 -->
-                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="project-card card h-100">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073" class="project-img card-img-top" alt="Gestion immobilière">
-                        <div class="card-body p-4">
-                            <h4>Gestion de BDD d'une agence immobilière</h4>
-                            <p class="card-text">Optimisation des opérations grâce à l'analyse des données immobilières.</p>
-                            <div class="mt-auto">
-                                <span class="skill-badge">SQL</span>
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">Data Analysis</span>
-                            </div>
-                        </div>
-                        <div class="project-overlay">
-                            <h4>Gestion de BDD d'une agence immobilière</h4>
-                            <p>J'ai conçu et implémenté une base de données relationnelle complète pour une agence immobilière, incluant des tableaux de bord pour le suivi des ventes et des tendances du marché. Le système a facilité l'identification de zones à fort potentiel d'investissement.</p>
-                            <div class="tech-stack">Technologies utilisées:</div>
-                            <div class="tech-list">
-                                <span class="skill-badge">MySQL</span>
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">Pandas</span>
-                                <span class="skill-badge">ETL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6 -->
-                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="project-card card h-100">
-                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070" class="project-img card-img-top" alt="App Web">
-                        <div class="card-body p-4">
-                            <h4>Application web de formatation de données</h4>
-                            <p class="card-text">Création d'une application web pour convertir des données en formats XML, JSON et PDF.</p>
-                            <div class="mt-auto">
-                                <span class="skill-badge">HTML</span>
-                                <span class="skill-badge">CSS</span>
-                                <span class="skill-badge">Java EE</span>
-                                <span class="skill-badge">MySQL</span>
-                            </div>
-                        </div>
-                        <div class="project-overlay">
-                            <h4>Application web de formatation de données</h4>
-                            <p>Cette application web full-stack permet aux utilisateurs d'importer leurs données, de les nettoyer via une interface intuitive, puis de les exporter dans divers formats. L'application inclut également un système de gestion d'utilisateurs et un historique des conversions.</p>
-                            <div class="tech-stack">Technologies utilisées:</div>
-                            <div class="tech-list">
-                                <span class="skill-badge">HTML5</span>
-                                <span class="skill-badge">CSS3</span>
-                                <span class="skill-badge">JavaScript</span>
-                                <span class="skill-badge">Java EE</span>
-                                <span class="skill-badge">Servlets</span>
-                                <span class="skill-badge">JSP</span>
-                                <span class="skill-badge">MySQL</span>
-                                <span class="skill-badge">JAXB</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- New Project: Medical Assistant -->
-                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="700">
-                    <div class="project-card card h-100 project-modal-trigger" data-modal="projectModal7">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070" class="project-img card-img-top" alt="Assistant Médical IA">
-                        <div class="card-body p-4">
-                            <h4>Assistant Médical avec LLMs et RAG</h4>
-                            <p class="card-text">Développement d'un assistant médical intelligent utilisant des modèles de langage avancés et la méthode Retrieval-Augmented Generation (RAG).</p>
-                            <div class="mt-auto">
-                                <span class="skill-badge">LLMs</span>
-                                <span class="skill-badge">RAG</span>
-                                <span class="skill-badge">Python</span>
+                    <!-- Project: Site web de Sudoku -->
+                    <div class="col-md-6 project-item" data-category="web">
+                        <div class="card h-100 project-card">
+                            <div class="card-body">
+                                <h4 class="card-title">Site web de Sudoku</h4>
+                                <p class="card-text">Plateforme web interactive permettant aux utilisateurs de générer des grilles de Sudoku personnalisées, de jouer en ligne et d'utiliser un solveur automatique. L'application inclut différents niveaux de difficulté et un système de suivi des performances.</p>
+                                <div class="mt-3">
+                                    <h6>Technologies utilisées:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="skill-badge">Java Jakarta EE</span>
+                                        <span class="skill-badge">MySQL</span>
+                                        <span class="skill-badge">Python</span>
+                                        <span class="skill-badge">HTML/CSS</span>
+                                        <span class="skill-badge">JavaScript</span>
+                                        <span class="skill-badge">Servlet/JSP</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-overlay">
-                            <h4>Assistant Médical avec LLMs et RAG</h4>
-                            <p>Ce projet vise à créer un assistant médical capable de fournir des réponses précises et contextualisées en combinant des modèles de langage avancés et des bases de données médicales. L'objectif est d'améliorer l'accès à des informations médicales fiables et personnalisées.</p>
-                            <div class="tech-stack">Technologies utilisées:</div>
-                            <div class="tech-list">
-                                <span class="skill-badge">LLMs</span>
-                                <span class="skill-badge">RAG</span>
-                                <span class="skill-badge">Python</span>
-                                <span class="skill-badge">Hugging Face</span>
-                                <span class="skill-badge">LangChain</span>
+                    </div>
+
+                    <!-- Project: Smart Cane -->
+                    <div class="col-md-6 project-item" data-category="iot">
+                        <div class="card h-100 project-card">
+                            <div class="card-body">
+                                <h4 class="card-title">Smart Cane (canne intelligente)</h4>
+                                <p class="card-text">Conception d'une canne intelligente équipée de capteurs et d'une caméra pour détecter les obstacles et assister les personnes malvoyantes dans leurs déplacements quotidiens. Le système fournit des retours haptiques et audio pour guider l'utilisateur.</p>
+                                <div class="mt-3">
+                                    <h6>Technologies utilisées:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="skill-badge">Computer Vision</span>
+                                        <span class="skill-badge">IoT</span>
+                                        <span class="skill-badge">Arduino</span>
+                                        <span class="skill-badge">Raspberry Pi</span>
+                                        <span class="skill-badge">Python</span>
+                                        <span class="skill-badge">OpenCV</span>
+                                    </div>
+                                </div>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=2073" alt="Illustration du projet Assistant Médical" class="img-fluid mt-3">
+                        </div>
+                    </div>
+
+                    <!-- Project: Assistant médical intelligent -->
+                    <div class="col-md-6 project-item" data-category="ai">
+                        <div class="card h-100 project-card">
+                            <div class="card-body">
+                                <h4 class="card-title">Assistant médical intelligent <span class="badge bg-warning text-dark">En cours</span></h4>
+                                <p class="card-text">Développement d'un assistant virtuel utilisant l'intelligence artificielle pour comprendre les symptômes décrits par les utilisateurs et proposer des pistes médicales pertinentes. Le système n'est pas conçu pour remplacer les professionnels de santé mais pour faciliter les premiers échanges.</p>
+                                <div class="mt-3">
+                                    <h6>Technologies utilisées:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="skill-badge">Intelligence Artificielle</span>
+                                        <span class="skill-badge">NLP</span>
+                                        <span class="skill-badge">Web Interface</span>
+                                        <span class="skill-badge">Python</span>
+                                        <span class="skill-badge">React</span>
+                                        <span class="skill-badge">TensorFlow</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project: Dashboard CHU -->
+                    <div class="col-md-6 project-item" data-category="data-science">
+                        <div class="card h-100 project-card">
+                            <div class="card-body">
+                                <h4 class="card-title">Dashboard pour un CHU</h4>
+                                <p class="card-text">Conception et mise en place de trois tableaux de bord pour différents services du centre hospitalier universitaire de Oujda. Ces tableaux de bord ont permis d'améliorer considérablement la prise de décision médicale.</p>
+                                <div class="mt-3">
+                                    <h6>Technologies utilisées:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="skill-badge">Power BI</span>
+                                        <span class="skill-badge">SQL</span>
+                                        <span class="skill-badge">Excel</span>
+                                        <span class="skill-badge">DAX</span>
+                                        <span class="skill-badge">DataViz</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: AI Text Summarizer -->
+                    <div class="col-md-6 project-item" data-category="ai">
+                        <div class="card h-100 project-card">
+                            <div class="card-body">
+                                <h4 class="card-title">AI Text Summarizer</h4>
+                                <p class="card-text">Développement d'un modèle AI pour résumer des textes en arabe, avec un accent sur la précision et la clarté. Ce modèle utilise des techniques avancées de NLP pour comprendre et résumer efficacement les textes.</p>
+                                <div class="mt-3">
+                                    <h6>Technologies utilisées:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="skill-badge">Python</span>
+                                        <span class="skill-badge">TensorFlow</span>
+                                        <span class="skill-badge">NLTK</span>
+                                        <span class="skill-badge">Transformers</span>
+                                        <span class="skill-badge">BERT</span>
+                                        <span class="skill-badge">Hugging Face</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Project Modals -->
-    <div id="projectModal1" class="project-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Dashboard pour un CHU</h3>
-                <div class="modal-close"><i class="fas fa-times"></i></div>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?q=80&w=2070" alt="Dashboard CHU" class="img-fluid mb-4">
-                    </div>
-                    <div class="col-md-6">
-                        <h4>Description</h4>
-                        <p>Ce projet a permis d'améliorer considérablement la prise de décision médicale. Les tableaux de bord ont été conçus après une analyse approfondie des besoins de chaque service, permettant une visualisation claire des métriques critiques.</p>
-                        
-                        <h4 class="mt-4">Technologies utilisées</h4>
-                        <div class="tech-list">
-                            <span class="skill-badge">Power BI</span>
-                            <span class="skill-badge">SQL</span>
-                            <span class="skill-badge">Excel</span>
-                            <span class="skill-badge">DAX</span>
-                            <span class="skill-badge">DataViz</span>
-                        </div>
-                        
-                        <h4 class="mt-4">Résultats</h4>
-                        <ul>
-                            <li>Réduction de 30% du temps de prise de décision</li>
-                            <li>Visualisation en temps réel des données critiques</li>
-                            <li>Implémentation réussie dans 3 services différents</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add similar modals for other projects -->
+        </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -310,5 +229,81 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Fonction de filtrage des projets
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.btn-filter');
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            // Ajouter le gestionnaire d'événement à chaque bouton de filtre
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Retirer la classe 'active' de tous les boutons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Ajouter la classe 'active' au bouton cliqué
+                    this.classList.add('active');
+                    
+                    // Récupérer la valeur du filtre
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filtrer les projets
+                    projectItems.forEach(item => {
+                        // Afficher tous les projets si le filtre est 'all'
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                            // S'assurer que les cartes ont la bonne taille
+                            item.classList.add('col-md-6');
+                        } 
+                        // Sinon, vérifier si le projet correspond au filtre
+                        else {
+                            if (item.getAttribute('data-category') === filterValue) {
+                                item.style.display = 'block';
+                                // S'assurer que les cartes ont la bonne taille
+                                item.classList.add('col-md-6');
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
+<!-- Add CSS for filters -->
+<style>
+    .btn-filter {
+        background: transparent;
+        border: 2px solid var(--secondary-color);
+        color: var(--primary-color);
+        margin: 0 5px 10px;
+        padding: 8px 20px;
+        border-radius: 30px;
+        transition: all 0.3s;
+    }
+    
+    .btn-filter:hover, .btn-filter.active {
+        background: var(--secondary-color);
+        color: white;
+    }
+    
+    .project-card {
+        height: 100%;
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-text {
+        flex-grow: 1;
+    }
+</style>
